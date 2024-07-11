@@ -1,12 +1,7 @@
-import { kafka } from "./admin";
+import { Kafka } from "kafkajs";
 
-async function init() {
-  const admin = kafka.admin();
-  console.log("Kafka connecting........");
-  admin.connect();
-  console.log("Kafka connected........");
-
-  admin.createTopics({
-    topics: [],
-  });
-}
+export const kafka = new Kafka({
+  clientId: "node-kafka-demo",
+  // kafka brokers - <IP>:9092
+  brokers: ["10.0.0.10:9092"],
+});
