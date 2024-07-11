@@ -3,11 +3,11 @@ import { kafka } from "./client.js";
 async function init() {
   const admin = kafka.admin();
   console.log("Kafka connecting........");
-  admin.connect();
+  await admin.connect();
   console.log("Kafka connected........");
 
   console.log("Creating topic");
-  admin.createTopics({
+  await admin.createTopics({
     // We are using Zomato as case study
     topics: [
       {
@@ -19,7 +19,7 @@ async function init() {
   console.log("Topic created [rider-updates]");
 
   console.log("Admin disconnected");
-  admin.disconnect();
+  await admin.disconnect();
 }
 
 init();
