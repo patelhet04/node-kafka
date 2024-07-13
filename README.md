@@ -59,3 +59,5 @@ npm install kafkajs
 ## Conclusion
 
 Congratulations! You have successfully set up a simple Node.js application that connects to Kafka using `kafkajs`. This demo sends user input to a Kafka topic, demonstrating the basics of integrating Kafka with Node.js.
+
+After installing the dependencies, follow the provided code examples for setting up Kafka. Once you understand Kafka's architecture, the setup process will be straightforward. Now you're ready to build powerful real-time applications with Kafka and Node.js
