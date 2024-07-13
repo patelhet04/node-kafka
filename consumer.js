@@ -1,4 +1,4 @@
-import { kafka } from "./client.js";
+const { kafka } = require("./client.js");
 
 async function init() {
   // creating a consumer with group id

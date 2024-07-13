@@ -1,9 +1,9 @@
-import { kafka } from "./client.js";
+const { kafka } = require("./client.js");
 
 async function init() {
   const admin = kafka.admin();
   console.log("Kafka connecting........");
-  await admin.connect();
+  admin.connect();
   console.log("Kafka connected........");
 
   console.log("Creating topic");
